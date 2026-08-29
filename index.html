@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Blobby Volley</title>
+    <title>Blobby Volley</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -103,9 +104,8 @@
 
 
       } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        // Размер канваса задаёт CSS (на всё окно), а движок подтягивает
+        // буфер рендера под него — config.matchWebGLToCanvasSize по умолчанию true.
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
